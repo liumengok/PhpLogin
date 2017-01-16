@@ -1,6 +1,5 @@
 <?php
 /**同时刊出session和cookie的页面*/
-//即使是刊出时，也必须起首开端会话才干接见会话变量
 session_start();
 //应用一个会话变量搜检登录状况
 if(isset($_SESSION['user_id'])){
@@ -13,7 +12,7 @@ if(isset($_SESSION['user_id'])){
     //应用内置session_destroy()函数调用撤销会话
     session_destroy();
 }
-//同时将各个cookie的到期时候设为畴昔的某个时候，使它们由体系删除，时候以秒为单位
+//同时将各个cookie删除
 setcookie('user_id','',time()-3600);
 setcookie('username','',time()-3600);
 //location首部使浏览看重定向到另一个页面
