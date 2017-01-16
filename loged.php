@@ -16,6 +16,4 @@ if(isset($_SESSION['username'])){
     echo 'You are Logged as '.$_SESSION['username'].'<br/>';
     echo '<a href="logOut.php"> Log Out('.$_SESSION['username'].')</a>';
 }
-/**在已登录页面中，可以利用用户的session如$_SESSION['username']、
- * $_SESSION['user_id']对数据库进行查询，可以做好多好多事情*/
 ?>
